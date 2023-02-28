@@ -23,7 +23,7 @@ public class PaymentServiceImpl implements IPaymentService {
         return paymentMapper.insert(payment);
     }
 
-    public  Payment getPaymentById(Long id){
-        return paymentMapper.getPaymentById(id);
+    public  Payment getOneById(Long id){
+        return paymentMapper.getOneById(id);
     }
 }

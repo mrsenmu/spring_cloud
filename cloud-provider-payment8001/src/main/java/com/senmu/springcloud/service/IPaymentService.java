@@ -25,5 +25,5 @@ public interface IPaymentService {
      * @param id
      * @return
      */
-    public Payment getPaymentById(Long id);
+    public Payment getOneById(Long id);
 }

@@ -15,6 +15,6 @@ public interface PaymentMapper {
 
     public int insert(Payment payment);
 
-    public Payment getPaymentById(@Param("id") Long id);
+    public Payment getOneById(@Param("id") Long id);
 
 }
