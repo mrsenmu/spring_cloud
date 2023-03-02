@@ -11,7 +11,7 @@
         insert into payment(serial) values (#{serial});
     </insert>
 
-    <select id="getPaymentById" parameterType="Long" resultMap="BaseResultMap">
+    <select id="getOneById" parameterType="Long" resultMap="BaseResultMap">
         select * from payment where id = #{id};
     </select>
 </mapper>

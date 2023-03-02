@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * 业务名称
@@ -35,7 +37,7 @@ public class PaymentController {
     }
 
     @GetMapping("/{id}")
-    public CommonResult<Payment> detail(@PathVariable("id") Long id){
+    public CommonResult<Payment> detail(Long id){
         Payment result = paymentService.getOneById(id);
         log.info("查询成功: " + result);
 
