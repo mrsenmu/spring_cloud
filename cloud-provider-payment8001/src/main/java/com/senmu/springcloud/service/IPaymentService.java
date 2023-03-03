@@ -1,9 +1,6 @@
 package com.senmu.springcloud.service;
 
 import com.senmu.springcloud.entities.Payment;
-import com.senmu.springcloud.mapper.PaymentMapper;
-
-import javax.annotation.Resource;
 
 /**
  * 业务名称

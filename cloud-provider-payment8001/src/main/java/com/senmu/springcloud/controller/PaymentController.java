@@ -25,7 +25,7 @@ public class PaymentController {
     private IPaymentService paymentService;
 
     @PostMapping
-    public CommonResult add(Payment payment){
+    public CommonResult add(@RequestBody Payment payment){
         int result = paymentService.insert(payment);
         log.info("insert:" + result);
 
@@ -37,7 +37,7 @@ public class PaymentController {
     }
 
     @GetMapping("/{id}")
-    public CommonResult<Payment> detail(Long id){
+    public CommonResult<Payment> detail(@PathVariable("id") Long id){
         Payment result = paymentService.getOneById(id);
         log.info("查询成功: " + result);
 

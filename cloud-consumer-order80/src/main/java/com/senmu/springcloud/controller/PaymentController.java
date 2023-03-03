@@ -28,12 +28,12 @@ public class PaymentController {
     private RestTemplate restTemplate;
 
     @GetMapping()
-    public CommonResult<Payment> add(Payment payment) {
+    public CommonResult add(Payment payment) {
         return restTemplate.postForObject(PAYMENT_URL + "/payment", payment, CommonResult.class);
     }
 
     @GetMapping("/{id}")
-    public CommonResult<Payment> detail(@PathVariable("id") Long id) {
+    public CommonResult detail(@PathVariable("id") Long id) {
         return restTemplate.getForObject(PAYMENT_URL + "/payment/" + id, CommonResult.class);
     }
 
