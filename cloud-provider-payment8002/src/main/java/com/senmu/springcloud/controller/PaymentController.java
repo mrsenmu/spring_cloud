@@ -1,6 +1,5 @@
 package com.senmu.springcloud.controller;
 
-import com.netflix.discovery.DiscoveryClient;
 import com.senmu.springcloud.entities.CommonResult;
 import com.senmu.springcloud.entities.Payment;
 import com.senmu.springcloud.service.IPaymentService;
@@ -28,9 +27,6 @@ public class PaymentController {
 
     @Value("${server.port}")
     private String serverPort;
-
-    @Resource
-    private DiscoveryClient discoveryClient;
 
     @PostMapping
     public CommonResult add(@RequestBody Payment payment){

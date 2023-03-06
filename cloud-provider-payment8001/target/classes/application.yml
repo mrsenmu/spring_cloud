@@ -23,4 +23,10 @@ eureka:
     fetch-registry: true
     service-url:
       # 设置与Eureka Server交互的地址用于查询服务和注册服务
-      defaultZone: http://localhost:7001/eureka
+      # defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+  instance:
+    # 重置Eureka注册服务实例列表status列中，ip:服务名称:端口的默认命名
+    instance-id: payment8001
+    # 访问路径显示ip地址
+    prefer-ip-address: true
