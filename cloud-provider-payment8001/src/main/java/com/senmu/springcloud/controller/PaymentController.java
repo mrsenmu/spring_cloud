@@ -1,16 +1,15 @@
 package com.senmu.springcloud.controller;
 
-import com.netflix.discovery.DiscoveryClient;
 import com.senmu.springcloud.entities.CommonResult;
 import com.senmu.springcloud.entities.Payment;
 import com.senmu.springcloud.service.IPaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import java.util.List;
 
 /**
  * 业务名称
@@ -31,6 +30,16 @@ public class PaymentController {
 
     @Resource
     private DiscoveryClient discoveryClient;
+
+    @GetMapping("/discovery")
+    public Object discovery(){
+        List<String> services = discoveryClient.getServices();
+        for (String service: services){
+            log.info("service: " + service);
+        }
+
+        return this.discoveryClient;
+    }
 
     @PostMapping
     public CommonResult add(@RequestBody Payment payment){
