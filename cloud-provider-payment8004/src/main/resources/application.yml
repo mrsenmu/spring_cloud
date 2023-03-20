@@ -10,5 +10,5 @@ spring:
 #      本地虚拟机
       #connect-string: 192.168.75.131:2181
       # 蒲公英远程连接虚拟机
-      connect-string: 172.16.3.171:2181
+      connect-string: 172.16.2.61:2181
 

@@ -12,11 +12,11 @@ eureka:
     fetch-registry: false
     service-url:
       # 设置与Eureka Server交互的地址用于查询服务和注册服务
-       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-#      defaultZone: http://eureka7002.com:7002/eureka/
+#       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://eureka7002.com:7002/eureka/
 
-  server:
-    # 表示注册中心是否开启服务的自我保护能力。默认true
-    enable-self-preservation: false
-    # 表示 Eureka Server 清理无效节点的频率，默认 60000 毫秒（60 秒）。
-    eviction-interval-timer-in-ms: 2000
+#  server:
+#    # 表示注册中心是否开启服务的自我保护能力。默认true
+#    enable-self-preservation: false
+#    # 表示 Eureka Server 清理无效节点的频率，默认 60000 毫秒（60 秒）。
+#    eviction-interval-timer-in-ms: 2000
