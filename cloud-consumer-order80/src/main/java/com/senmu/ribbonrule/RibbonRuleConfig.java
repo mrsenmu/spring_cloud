@@ -1,4 +1,4 @@
-package com.senmu.myribbonrule;
+package com.senmu.ribbonrule;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
@@ -12,9 +12,10 @@ import org.springframework.context.annotation.Configuration;
  * @date 2023-04-03 14:55
  */
 @Configuration
-public class MyRibbonRule {
+public class RibbonRuleConfig {
 
     @Bean
+    // 替换Ribbon中默认的负载均衡算法
     public IRule myRule(){
         return new RandomRule();
     }
